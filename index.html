@@ -3,184 +3,196 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>MediaMod</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
-    <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+    <link href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <!-- related modal with fx class "modal-fx-fadeInScale" -->
-    <div id="modal-id" class="modal modal-fx-fadeInScale">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box">
-                <div class="content">
-                    <div class="has-text-centered">
-                        <a href="https://addons.mozilla.org/en-US/firefox/addon/mediamod/"
-                            class="button is-medium is-primary">
+<!-- related modal with fx class "modal-fx-fadeInScale" -->
+<div class="modal modal-fx-fadeInScale" id="modal-id">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="box">
+            <div class="content">
+                <div class="has-text-centered">
+                    <h1 class="subtitle">
+                        Select your browser
+                    </h1>
+                    <a class="button is-medium is-primary"
+                       href="https://addons.mozilla.org/en-US/firefox/addon/mediamod/">
                             <span class="icon">
                                 <i class="fab fa-firefox"></i>
                             </span>
-                            <span>Firefox</span>
-                        </a>
-                        <a href="https://chrome.google.com/webstore/detail/mediamod/oeocpffgjbagninjebpgopolopdegogb" class="button is-medium is-primary">
+                        <span>Firefox</span>
+                    </a>
+                    <a class="button is-medium is-primary"
+                       href="https://chrome.google.com/webstore/detail/mediamod/oeocpffgjbagninjebpgopolopdegogb">
                             <span class="icon">
                                 <i class="fab fa-chrome"></i>
                             </span>
-                            <span>Chrome</span>
-                        </a>
-                    </div>
+                        <span>Chrome</span>
+                    </a>
                 </div>
             </div>
         </div>
-        <button onclick="hideModal()" class="modal-close is-large" aria-label="close"></button>
     </div>
-    <div class="hero is-dark">
-        <section class="section">
-            <div class="container is-centered">
-                <div class="columns is-mobile is-vcentered">
-                    <div class="column is-narrow">
-                        <img src="img/icon.png" class="image is-inline-block" style="border-radius: 20px; width: 100px;"
-                            alt="MediaMod Icon">
-                    </div>
-                    <div class="column is-multiline">
-                        <h1 class="title">MediaMod</h1>
-                        <h1 class="subtitle">
-                            View the song that you are currently playing in Minecraft!
-                        </h1>
-                    </div>
+    <button aria-label="close" class="modal-close is-large" onclick="hideModal()"></button>
+</div>
+<div class="hero is-dark">
+    <section class="section">
+        <div class="container is-centered">
+            <div class="columns is-mobile is-vcentered">
+                <div class="column is-narrow">
+                    <img alt="MediaMod Icon" class="image is-inline-block" src="img/icon.png"
+                         style="border-radius: 20px; width: 100px;">
                 </div>
-                <div class="buttons">
-                    <a href="https://github.com/MediaModMC/MediaMod/releases" class="button is-medium is-primary">
+                <div class="column is-multiline">
+                    <h1 class="title">MediaMod</h1>
+                    <h1 class="subtitle">
+                        View the song that you are currently playing in Minecraft!
+                    </h1>
+                </div>
+            </div>
+            <div class="buttons">
+                <a class="button is-medium is-primary" href="https://github.com/MediaModMC/MediaMod/releases">
                         <span class="icon">
                             <i class="fas fa-download"></i>
                         </span>
-                        <span>Download Latest</span>
-                    </a>
-                    <span onclick="showModal()" class="button is-medium is-primary modal-button" data-target="modal-id">
+                    <span>Download Latest</span>
+                </a>
+                <span class="button is-medium is-primary modal-button" data-target="modal-id" onclick="showModal()">
                         <span class="icon">
                             <i class="fas fa-download"></i>
                         </span>
                         <span>Browser Extension</span>
                     </span>
-                    <a href="https://discord.gg/hcwgaQx" class="button is-medium is-info">
+                <a class="button is-medium is-info" href="https://discord.gg/PVjESWA">
                         <span class="icon">
                             <i class="fab fa-discord"></i>
                         </span>
-                        <span>Discord</span>
-                    </a>
-                    <a href="https://github.com/MediaModMC" class="button is-medium">
+                    <span>Discord</span>
+                </a>
+                <a class="button is-medium" href="https://github.com/MediaModMC">
                         <span class="icon">
                             <i class="fab fa-github"></i>
                         </span>
-                        <span>GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-8-desktop is-offset-2-desktop">
-                    <div class="content">
-                        <h3>What is MediaMod?</h3>
-                        <p>
-                            MediaMod is a mod for Minecraft Forge 1.8.9, it will display a music player on your screen
-                            with
-                            information about the song you are currently playing!
-                            The streaming services that are currently supported are:
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="https://spotify.com">Spotify</a>
-                            </li>
-                            <li>
-                                <a href="https://play.google.com/music">Google Play Music</a>
-                            </li>
-                            <li>
-                                <a href="https://soundcloud.com">SoundCloud</a>
-                            </li>
-                            <li>
-                                <a href="https://youtube.com">YouTube</a>
-                            </li>
-                            <li>
-                                <a href="https://music.youtube.com">YouTube Music</a>
-                            </li>
-                            <li>
-                                <a href="https://beta.music.apple.com">Apple Music (web beta)</a>
-                            </li>
-                        </ul>
-                        <h3>Try it out!</h3>
-                        <p>
-                            To download and install MediaMod for Forge 1.8.9, follow these steps:
-                        </p>
-                        <ol>
-                            <li>
-                                <p>
-                                    Download the <strong>latest version</strong> of MediaMod
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Depending on your <strong>operating system</strong>, the following step will differ
-                                </p>
-                                <ul>
-                                    <li>
-                                        <p><strong>Linux</strong>:<br>Open Terminal and type the following command:
-                                            <code>cd
-                                        ~/.minecraft</code>
-                                            <p>Then, type this command: <code>mv /path/to/mod.jar mods/</code>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p><strong>Windows</strong>:<br>Press the Windows key + R, in the dialog that
-                                            appears type: <code>%appdata%\.minecraft</code>
-                                            <p>Then, drag the MediaMod jar file into the <code>mods</code> directory</p>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <p><strong>macOS / OS X</strong>:<br>In Finder, from the Go menu, select <code>Go to
-                                        Folder</code>, then type: <code>~/Library/Application Support/minecraft</code>,
-                                            and click Go.
-                                            <p>Then, drag the MediaMod jar file into the <code>mods</code> directory</p>
-                                    </li>
-                                    <br>
-                                </ul>
-                            </li>
-                            <li>
-                                <p>
-                                    Open the Minecraft Launcher and start Forge 1.8.9 and enjoy MediaMod!
-                                </p>
-                            </li>
-                        </ol>
-                        <h3>Browser Integration</h3>
-                        <ol>
-                            <li>
-                                <p>
-                                    Download the <strong>latest version</strong> of the extension from your web store
-                                    and enjoy!<br>
-                                    <small>Note: you may need to restart your Minecraft Client after installing the
-                                        extension for it to take effect!</small>
-                                </p>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
+                    <span>GitHub</span>
+                </a>
             </div>
         </div>
     </section>
-    <script>
-        function showModal() {
-            document.getElementById("modal-id").classList.add("is-active")
-        }
-        function hideModal() {
-            document.getElementById("modal-id").classList.remove("is-active")
-        }
-    </script>
+</div>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+                <div class="content">
+                    <h3>What is MediaMod?</h3>
+                    <p>
+                        MediaMod is a mod for Minecraft Forge 1.8.9 & 1.12.2, it will display a music player on your
+                        screen
+                        with
+                        information about the song you are currently playing!
+                        The streaming services that are currently supported are:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://spotify.com">Spotify</a>
+                        </li>
+                        <li>
+                            <a href="https://soundcloud.com">SoundCloud</a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com">YouTube</a>
+                        </li>
+                        <li>
+                            <a href="https://music.youtube.com">YouTube Music</a>
+                        </li>
+                        <li>
+                            <a href="https://beta.music.apple.com">Apple Music</a>
+                        </li>
+                    </ul>
+                    <div id="how_to_install"></div>
+                    <h3>Try it out!</h3>
+                    <p>
+                        To download and install MediaMod for Forge, follow these steps:
+                    </p>
+                    <ol>
+                        <li>
+                            <p>
+                                Download the <strong>latest version</strong> of MediaMod for your Minecraft Version
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Depending on your <strong>operating system</strong>, the following step will differ
+                            </p>
+                            <ul>
+                                <li>
+                                    <p><strong>Linux</strong>:<br>Open Terminal and type the following command:
+                                        <code>cd
+                                            ~/.minecraft</code>
+                                    <p>Then, type this command: <code>mv /path/to/mod.jar mods/</code>
+                                </li>
+                                <br>
+                                <li>
+                                    <p><strong>Windows</strong>:<br>Press the Windows key + R, in the dialog that
+                                        appears type: <code>%appdata%\.minecraft</code>
+                                    <p>Then, drag the MediaMod jar file into the <code>mods</code> directory</p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p><strong>macOS / OS X</strong>:<br>In Finder, from the Go menu, select <code>Go to
+                                        Folder</code>, then type: <code>~/Library/Application Support/minecraft</code>,
+                                        and click Go.
+                                    <p>Then, drag the MediaMod jar file into the <code>mods</code> directory</p>
+                                </li>
+                                <br>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>
+                                Open the Minecraft Launcher and start Forge, enjoy MediaMod!
+                            </p>
+                        </li>
+                    </ol>
+                    <h3>Browser Integration</h3>
+                    <ul>
+                        <li>
+                            <p>
+                                Download the <strong>latest version</strong> of the extension from your web store
+                                and enjoy!<br>
+                                <small>Note: you may need to restart your Minecraft Client after installing the
+                                    extension for it to take effect!</small>
+                            </p>
+                        </li>
+                    </ul>
+                    <h3>Updating MediaMod</h3>
+                    <p>
+                        To update MediaMod, if you are on <strong>version 2.0 or higher</strong>, you can use the <code>/mmupdate</code>
+                        command to automatically update MediaMod. If you are <strong>not on version 2.0</strong>, go
+                        back to the <a href="#how_to_install">installation instructions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+</footer>
+<script>
+    function showModal() {
+        document.getElementById("modal-id").classList.add("is-active")
+    }
+
+    function hideModal() {
+        document.getElementById("modal-id").classList.remove("is-active")
+    }
+</script>
 </body>
 
 </html>
